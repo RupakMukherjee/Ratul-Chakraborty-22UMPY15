@@ -201,4 +201,4 @@ plt.show()
 end_time=time.time()
 
 #RUN TIME
-print(start_time-end_time)
+print(end_time-start_time)

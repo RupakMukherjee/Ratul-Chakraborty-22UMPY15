@@ -1,6 +1,7 @@
-# Ratul-Chakraborty-22UMPY15
 MSc Physics Project(Knot Project)
 <br>
-This project is about  developing a data based numerical algorithm which can compute the linking Number of a Hopf link and a two component unlink to compare and distinguish between the two. So far we have succesfully computed and distinguished between the Hopf link and unlink. Next on the line we are aiming for generalising the algorithm for n-component Hopf rings and unlink.
-
-
+This project focuses on developing a data-based numerical algorithm capable of computing the linking number of a two-component Hopf link and a two-component Unlink. The primary objective is to compare and distinguish between the two. Successfully computed, the linking numbers of the Hopf link and the Unlink provided a basis for differentiation using the code in the Linkage.py file.
+<br>
+Subsequently, the algorithm was generalized to compute the linking number (Helicity) for any given n-component Hopf link, where n=1,2,3,4,5, and so on. This generalization allows for the distinction between different components. The code for this generalized algorithm is provided in the n_component_HELICITY.py file.
+<br>
+Moving forward, we next aim for applying these algorithms to various data-driven physical phenomena.

@@ -7,9 +7,10 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+Wy6p4xUjXJF7kPKL8d+tnec8tusAtAnlD" crossorigin="anonymous">
-    
+
     <!-- Custom CSS -->
     <style>
+        /* Global Styles */
         body {
             padding-top: 56px; /* Adjusted for fixed navbar height */
             font-family: 'Arial', sans-serif;
@@ -31,13 +32,13 @@
         }
 
         /* About Section Styling */
-        #about {
+        #about-section {
             background-color: #f8f9fa;
             padding: 40px 0;
         }
 
         /* Contact Form Styling */
-        #contact {
+        #contact-section {
             background-color: #dfe6e9;
             padding: 40px 0;
         }
@@ -62,20 +63,20 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#home-section">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#about">About</a>
+                    <a class="nav-link" href="#about-section">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#contact">Contact</a>
+                    <a class="nav-link" href="#contact-section">Contact</a>
                 </li>
             </ul>
         </div>
     </nav>
 
     <!-- Main Content -->
-    <div id="home" class="container mt-5">
+    <div id="home-section" class="container mt-5">
         <div class="jumbotron">
             <h1 class="display-4">Welcome to My MSc Project</h1>
             <p class="lead">This is a simple webpage showcasing the features of Bootstrap for your MSc project.</p>
@@ -85,7 +86,7 @@
     </div>
 
     <!-- About Section -->
-    <div id="about" class="container mt-5">
+    <div id="about-section" class="container mt-5">
         <div class="row">
             <div class="col-md-6">
                 <h2>About the Project</h2>
@@ -93,13 +94,13 @@
                 <!-- Add more content about your project -->
             </div>
             <div class="col-md-6">
-                <img src="project-image.jpg" alt="Project Image" class="img-fluid">
+                <img src="project-image.jpg" alt="MSc Project Image" class="img-fluid">
             </div>
         </div>
     </div>
 
     <!-- Contact Form Section -->
-    <div id="contact" class="container mt-5">
+    <div id="contact-section" class="container mt-5">
         <h2>Contact Me</h2>
         <form>
             <div class="form-group">
@@ -124,4 +125,9 @@
     </footer>
 
     <!-- Bootstrap JS (optional) -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-zehKt4r1mI5S+hfpClC5sID8fZzQFEW+pWkZNl04mGjFFfNYEP/06ntpU8f5vVm+" crossorigin="anonymous" defer></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+Wy6p4xUjXJF7kPKL8d+tnec8tusAtAnlD" crossorigin="anonymous" defer></script>
+
+</body>
+</html>

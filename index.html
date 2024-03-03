@@ -3,42 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Website Title</title>
+    <title>MSc Project - Your Name</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+Wy6p4xUjXJF7kPKL8d+tnec8tusAtAnlD" crossorigin="anonymous">
+    
+    <!-- Custom CSS -->
+    <style>
+        body {
+            padding-top: 56px; /* Adjusted for fixed navbar height */
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Navbar Styling */
+        .navbar {
+            background-color: #3498db;
+        }
+
+        .navbar-light .navbar-nav .nav-link {
+            color: #fff;
+        }
+
+        /* Jumbotron Styling */
+        .jumbotron {
+            background-color: #ecf0f1;
+            padding: 20px;
+        }
+
+        /* About Section Styling */
+        #about {
+            background-color: #f8f9fa;
+            padding: 40px 0;
+        }
+
+        /* Contact Form Styling */
+        #contact {
+            background-color: #dfe6e9;
+            padding: 40px 0;
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #2c3e50;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
 </head>
 <body>
 
     <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Your Website</a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <a class="navbar-brand" href="#">MSc Project</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
+            <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
+                    <a class="nav-link" href="#about">About</a>
                 </li>
-                <!-- Add more navigation links as needed -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
             </ul>
         </div>
     </nav>
 
-    <!-- Page Content -->
-    <div class="container mt-4">
-        <h1>Welcome to Your Website</h1>
-        <p>This is the main content of your homepage. You can add more content, images, and sections as needed.</p>
+    <!-- Main Content -->
+    <div id="home" class="container mt-5">
+        <div class="jumbotron">
+            <h1 class="display-4">Welcome to My MSc Project</h1>
+            <p class="lead">This is a simple webpage showcasing the features of Bootstrap for your MSc project.</p>
+            <hr class="my-4">
+            <p>Explore the navigation links to learn more about the project and feel free to contact me with any questions.</p>
+        </div>
     </div>
 
-    <!-- Bootstrap JS (optional, but needed for certain features) -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-zehKt4r1mI5S+hfpClC5sID8fZzQFEW+pWkZNl04mGjFFfNYEP/06ntpU8f5vVm+" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+Wy6p4xUjXJF7kPKL8d+tnec8tusAtAnlD" crossorigin="anonymous"></script>
+    <!-- About Section -->
+    <div id="about" class="container mt-5">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>About the Project</h2>
+                <p>This MSc project aims to...</p>
+                <!-- Add more content about your project -->
+            </div>
+            <div class="col-md-6">
+                <img src="project-image.jpg" alt="Project Image" class="img-fluid">
+            </div>
+        </div>
+    </div>
 
-</body>
-</html>
+    <!-- Contact Form Section -->
+    <div id="contact" class="container mt-5">
+        <h2>Contact Me</h2>
+        <form>
+            <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter your name">
+            </div>
+            <div class="form-group">
+                <label for="email">Your Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter your email">
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea class="form-control" id="message" rows="4" placeholder="Enter your message"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2023 MSc Project - Your Name
+    </footer>
+
+    <!-- Bootstrap JS (optional) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/

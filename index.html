@@ -51,6 +51,9 @@
             padding: 10px 0;
         }
     </style>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 <body>
 
@@ -101,22 +104,11 @@
 
     <!-- Contact Form Section -->
     <div id="contact-section" class="container mt-5">
-        <h2>Contact Me</h2>
-        <form>
-            <div class="form-group">
-                <label for="name">Your Name</label>
-                <input type="text" class="form-control" id="name" placeholder="Enter your name">
-            </div>
-            <div class="form-group">
-                <label for="email">Your Email</label>
-                <input type="email" class="form-control" id="email" placeholder="Enter your email">
-            </div>
-            <div class="form-group">
-                <label for="message">Message</label>
-                <textarea class="form-control" id="message" rows="4" placeholder="Enter your message"></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
+        <div class="form-container">
+            <h2>Contact Me</h2>
+            <!-- Add a button to trigger the Python script -->
+            <button id="runScriptBtn" class="btn btn-primary">Run Python Script</button>
+        </div>
     </div>
 
     <!-- Footer -->
@@ -128,6 +120,16 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-zehKt4r1mI5S+hfpClC5sID8fZzQFEW+pWkZNl04mGjFFfNYEP/06ntpU8f5vVm+" crossorigin="anonymous" defer></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+Wy6p4xUjXJF7kPKL8d+tnec8tusAtAnlD" crossorigin="anonymous" defer></script>
+    <script>
+        $(document).ready(function () {
+            $("#runScriptBtn").click(function () {
+                // Make an AJAX request to the Flask route that runs the Python script
+                $.get("/run_script", function (data) {
+                    alert(data); // Display a simple alert after the script is executed
+                });
+            });
+        });
+    </script>
 
 </body>
 </html>

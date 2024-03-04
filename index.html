@@ -6,7 +6,7 @@
     <title>Your Project</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
@@ -17,6 +17,18 @@
             color: #fff;
             padding: 1em;
             text-align: center;
+        }
+
+        nav {
+            background-color: #444;
+            padding: 0.5em;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 1em;
         }
 
         section {
@@ -33,6 +45,18 @@
             padding: 1em;
             text-align: center;
         }
+
+        h2 {
+            color: #333;
+        }
+
+        .cta-button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 0.5em 1em;
+            text-decoration: none;
+            border-radius: 5px;
+        }
     </style>
 </head>
 <body>
@@ -41,14 +65,23 @@
         <h1>Your Project Name</h1>
     </header>
 
-    <section>
-        <h2>Welcome to Your Project</h2>
-        <p>This is a simple HTML and CSS template for your project.</p>
-        <!-- Add more content as needed -->
-    </section>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#demo">Demo</a>
+        <a href="#code">Code</a>
+    </nav>
 
+    <section id="about">
+        <h2>Welcome to Your Project</h2>
+        <p>This is a simple HTML and CSS template for your project. Customize it to showcase your project's features and information.</p>
+        <a href="#" class="cta-button">Try the Demo</a>
+    <section id="code">
+        <h2>Project Code</h2>
+        <p>Explore the code for this project on GitHub:</p>
+        <a href="https://github.com/RupakMukherjee/Ratul-Chakraborty-22UMPY15/tree/main" class="cta-button" target="_blank">View Code on GitHub</a>
+    </section>
     <footer>
-        &copy; 2024 Your Project. All rights reserved.
+        &copy; 2024 Your Project. All rights reserved. | Follow us on <a href="#" target="_blank">Twitter</a>
     </footer>
 
 </body>

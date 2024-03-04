@@ -99,6 +99,25 @@ Moving forward, we next aim for applying these algorithms to various data-driven
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <!-- Add JavaScript for running Python code -->
+    <script>
+        function runPythonCode() {
+            // Get user input from the form
+            var userInput = document.getElementById('input').value;
 
+            // Send input to the server-side script (run_code.py)
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', 'run_code.py', true);
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    // Display the output
+                    document.getElementById('output-content').innerText = xhr.responseText;
+                    document.getElementById('output').style.display = 'block';
+                }
+            };
+            xhr.send('input=' + encodeURIComponent(userInput));
+        }
+    </script>
 </body>
 </html>

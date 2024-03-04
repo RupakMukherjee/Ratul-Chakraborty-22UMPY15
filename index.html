@@ -3,146 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
-    <title>Linkage Analysis</title>
-</head>
-<body>
-    <h1>Linkage Analysis</h1>
-    <form action="/result" method="post">
-        <label for="links">Enter Links:</label>
-        <textarea id="links" name="links" rows="10" cols="50"></textarea>
-        <br>
-        <input type="submit" value="Run Analysis">
-    </form>
-=======
-    <title>MSc Project - Your Name</title>
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+Wy6p4xUjXJF7kPKL8d+tnec8tusAtAnlD" crossorigin="anonymous">
-
-    <!-- Custom CSS -->
+    <title>Your Project</title>
     <style>
-        /* Global Styles */
         body {
-            padding-top: 56px; /* Adjusted for fixed navbar height */
-            font-family: 'Arial', sans-serif;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
         }
 
-        /* Navbar Styling */
-        .navbar {
-            background-color: #3498db;
-        }
-
-        .navbar-light .navbar-nav .nav-link {
+        header {
+            background-color: #333;
             color: #fff;
-        }
-
-        /* Jumbotron Styling */
-        .jumbotron {
-            background-color: #ecf0f1;
-            padding: 20px;
-        }
-
-        /* About Section Styling */
-        #about-section {
-            background-color: #f8f9fa;
-            padding: 40px 0;
-        }
-
-        /* Contact Form Styling */
-        #contact-section {
-            background-color: #dfe6e9;
-            padding: 40px 0;
-        }
-
-        /* Footer Styling */
-        footer {
-            background-color: #2c3e50;
-            color: #fff;
+            padding: 1em;
             text-align: center;
-            padding: 10px 0;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 2em auto;
+            padding: 2em;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
         }
     </style>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 <body>
 
-    <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-        <a class="navbar-brand" href="#">MSc Project</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#home-section">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#about-section">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#contact-section">Contact</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+    <header>
+        <h1>Your Project Name</h1>
+    </header>
 
-    <!-- Main Content -->
-    <div id="home-section" class="container mt-5">
-        <div class="jumbotron">
-            <h1 class="display-4">Welcome to My MSc Project</h1>
-            <p class="lead">This is a simple webpage showcasing the features of Bootstrap for your MSc project.</p>
-            <hr class="my-4">
-            <p>Explore the navigation links to learn more about the project and feel free to contact me with any questions.</p>
-        </div>
-    </div>
+    <section>
+        <h2>Welcome to Your Project</h2>
+        <p>This is a simple HTML and CSS template for your project.</p>
+        <!-- Add more content as needed -->
+    </section>
 
-    <!-- About Section -->
-    <div id="about-section" class="container mt-5">
-        <div class="row">
-            <div class="col-md-6">
-                <h2>About the Project</h2>
-                <p>This MSc project aims to...</p>
-                <!-- Add more content about your project -->
-            </div>
-            <div class="col-md-6">
-                <img src="project-image.jpg" alt="MSc Project Image" class="img-fluid">
-            </div>
-        </div>
-    </div>
-
-    <!-- Contact Form Section -->
-    <div id="contact-section" class="container mt-5">
-        <div class="form-container">
-            <h2>Contact Me</h2>
-            <!-- Add a button to trigger the Python script -->
-            <button id="runScriptBtn" class="btn btn-primary">Run Python Script</button>
-        </div>
-    </div>
-
-    <!-- Footer -->
     <footer>
-        &copy; 2023 MSc Project - Your Name
+        &copy; 2024 Your Project. All rights reserved.
     </footer>
 
-    <!-- Bootstrap JS (optional) -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-zehKt4r1mI5S+hfpClC5sID8fZzQFEW+pWkZNl04mGjFFfNYEP/06ntpU8f5vVm+" crossorigin="anonymous" defer></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+Wy6p4xUjXJF7kPKL8d+tnec8tusAtAnlD" crossorigin="anonymous" defer></script>
-    <script>
-        $(document).ready(function () {
-            $("#runScriptBtn").click(function () {
-                // Make an AJAX request to the Flask route that runs the Python script
-                $.get("/run_script", function (data) {
-                    alert(data); // Display a simple alert after the script is executed
-                });
-            });
-        });
-    </script>
-
->>>>>>> d2f6318fcfe74fafb819ec71c9eed81e2fbe6beb
 </body>
 </html>

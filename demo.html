@@ -1,0 +1,90 @@
+<!-- demo.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LINKAGE Demo</title>
+    <!-- Link Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 2em auto;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 1em;
+            border-radius: 5px;
+        }
+
+        .img-container {
+            margin-top: 20px;
+        }
+
+        .img-container img {
+            width: 100%;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        /* Add any additional styles for your demo page */
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Outputs created by the codes Linkage and n_component_HELICITY</h1>
+    </header>
+
+    <section>
+        <!-- Add multiple images here -->
+        <div class="container img-container">
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="images/3%20component.png" alt="Image 1">
+                </div>
+                <div class="col-md-4">
+                    <img src="images/u.png" alt="Image 2">
+                </div>
+                <div class="col-md-4">
+                    <img src="images/disc%20hpolk.png" alt="Image 3">
+                </div>
+                <div class="col-md-4">
+                    <img src="images/4(1)%20component.png" alt="Image 3">
+                </div>
+                <div class="col-md-4">
+                    <img src="images/5%20component.png" alt="Image 3">
+                </div>
+                <div class="col-md-4">
+                    <img src="images/6%20component.png" alt="Image 3">
+                </div>
+                
+                <!-- Add more images as needed -->
+            </div>
+        </div>
+    </section>
+    <!-- Note -->
+    <div class="note">
+        <p>The Linkage algorithm can only distinguish between the two-component unlink and the two-component Hopf link. On the other hand, the n_component_HELICITY algorithm is a more generalized version of the former. It has the capability to differentiate between various 'n' component Hopf rings, where 'n' can be 2, 3, 4, 5, 6, and so forth. Each of these links is generated from a dataset of discrete points.</p>
+    </div>
+    <!-- Link Bootstrap JS and Popper.js (required for Bootstrap dropdowns) -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</body>
+</html>

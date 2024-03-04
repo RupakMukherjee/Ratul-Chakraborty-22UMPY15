@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LINKAGE (M.Sc Project)</title>
+    <!-- Link Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #444;
+            padding: 0.5em;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 1em;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 2em auto;
+            padding: 2em;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        .cta-button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 0.5em 1em;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>LINKAGE (M.Sc Project)</h1>
+    </header>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="demo.html">Images</a>
+        <a href="#code">Code</a>
+    </nav>
+
+
+    <section id="about">
+        <h2>Introduction</h2>
+        <p>This project focuses on developing a data-based numerical algorithm capable of computing the linking number of a two-component Hopf link and a two-component Unlink. The primary objective is to compare and distinguish between the two. Successfully computed, the linking numbers of the Hopf link and the Unlink provided a basis for differentiation using the code in the Linkage.py file.
+Subsequently, the algorithm was generalized to compute the linking number (Helicity) for any given n-component Hopf link, where n=2,3,4,5,6 and so on. This generalization allows for the distinction between different components. The code for this generalized algorithm is provided in the n_component_HELICITY.py file.
+Moving forward, we next aim for applying these algorithms to various data-driven physical phenomena.</p>
+        <!-- Use Bootstrap primary button class -->
+        <a href="demo.html" class="btn btn-primary">Illustrative Images</a>
+    </section>
+    <section id="code">
+        <h2>Project Code</h2>
+        <p>Explore the code for this project on GitHub:</p>
+        <!-- Use Bootstrap secondary button class -->
+        <a href="https://github.com/RupakMukherjee/Ratul-Chakraborty-22UMPY15" class="btn btn-secondary" target="_blank">View Code on Linkage.py and n_component_HELICITY.py</a>
+        
+    </section>
+    
+    <footer>
+
+    &copy; 2024 Linkage. All rights reserved. | Follow us on <a href="#" target="_blank">Github</a>
+
+    </footer>
+    <!-- Link Bootstrap JS and Popper.js (required for Bootstrap dropdowns) -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <!-- Add JavaScript for running Python code -->
+    <script>
+        function runPythonCode() {
+            // Get user input from the form
+            var userInput = document.getElementById('input').value;
+
+            // Send input to the server-side script (run_code.py)
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', 'run_code.py', true);
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    // Display the output
+                    document.getElementById('output-content').innerText = xhr.responseText;
+                    document.getElementById('output').style.display = 'block';
+                }
+            };
+            xhr.send('input=' + encodeURIComponent(userInput));
+        }
+    </script>
+</body>
+</html>

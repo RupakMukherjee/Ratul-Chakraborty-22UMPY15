@@ -12,7 +12,7 @@ user_input = form.getvalue("input")
 input_data = json.loads(user_input)
 
 # Run the Python script (linkage.py) with user input
-result = subprocess.run(["python", "linkage.py"], input=json.dumps(input_data).encode(), text=True, capture_output=True)
+result = subprocess.run(["python", "Linkage.py"], input=json.dumps(input_data).encode(), text=True, capture_output=True)
 
 # Print the output
 print("Content-type: text/plain\n")

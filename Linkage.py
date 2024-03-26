@@ -125,7 +125,7 @@ def Linkage(list):
                  solution_vector=np.array(Lb)-np.array(La)
                  angle=np.degrees(np.arccos(np.dot(normal_vector,solution_vector)/(np.linalg.norm(normal_vector)*np.linalg.norm(solution_vector))))
                  print("THE ANGLE BETWEEN THE GRADIENT VECTOR AND THE SOLUTION VECTOR IS :", angle)
-                 if (0<=angle<90):
+                 if (0<=angle<90) or (270<angle<=360):
                   Linking_List.append(1)
                  elif (90<angle<270):
                   Linking_List.append(-1)

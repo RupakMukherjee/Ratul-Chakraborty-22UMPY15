@@ -156,7 +156,7 @@ def Linkage(list):
     #VISUALISING THE LINKS
     plt.show()
   LINK=[]
-  for lnk in list:
+  for lnk in Links:
     points1=lnk[0]
     points2=lnk[1]
     LINK.append(LINKING_NUMBER(points1,points2))

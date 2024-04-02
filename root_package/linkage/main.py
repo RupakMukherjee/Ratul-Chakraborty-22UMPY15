@@ -1,3 +1,14 @@
+#REQUIRED LIBRARIES AND SYMBOLS
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d.art3d import Poly3DCollection
+import time
+import numpy as np
+import sympy as sp
+t,u,v=sp.symbols('t u v')
+
+
+
+
 
 
 def Linkage(list):

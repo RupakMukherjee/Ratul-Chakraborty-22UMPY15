@@ -167,7 +167,7 @@ Time_stamp=[[( -9 , 0 , 0 ),( -8 , 0 , 0 ),( -6 , 0 , 2 ),( -6 , 2 , 0 ),( -6 , 
 
 #Plotting the data
 
-Plot(Time_stamp_5)
+Plot(Time_stamp)
 
 
 #Generating different combination of loops

@@ -15,4 +15,4 @@ The python script for the n-component Hopf link is included in the n-component f
 
 ## Copyright and License
 
-Code released under the [MIT](https://github.com/StartBootstrap/startbootstrap-creative/blob/master/LICENSE) license.
+Code released under the [MIT](https://github.com/RupakMukherjee/Ratul-Chakraborty-22UMPY15/blob/main/LICENSE) license.

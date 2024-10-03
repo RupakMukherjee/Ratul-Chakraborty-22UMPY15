@@ -1,4 +1,4 @@
-#Follow the instructions given in the README.md file to run this script using example datas provided in the linkage_data file
+#Follow the instructions given in the README.md file to run this script using example datas provided in the linkage_data.txt file
 
 
 #Requisites

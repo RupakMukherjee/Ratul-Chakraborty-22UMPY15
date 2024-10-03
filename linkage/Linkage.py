@@ -1,39 +1,40 @@
-#REQUIRED LIBRARIES AND SYMBOLS
+#Follow the instructions given in the README.md file to run this script using example datas provided in the linkage_data file
+
+
+#Requisites
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d.art3d import Poly3DCollection
 import time
 import numpy as np
 import sympy as sp
 t,u,v=sp.symbols('t u v')
-
-#START TIME
 start_time=time.time()
 
 
-#THE FUNCTION WHICH SAYS WHETHER THE GIVEN LINKS ARE THE SAME OR DIFFERENT
+#Linkage
 def Linkage(list):
   
   def LINKING_NUMBER(points1,points2):
     
-    # Convert points to numpy array for easier manipulation
+    #Convert points to numpy array for easier manipulation
     points1 = np.array(points1)
     points2 = np.array(points2)
 
-    # Create a 3D plot
+    #Create a 3D plot
     fig = plt.figure()
     ax = fig.add_subplot(111, projection='3d')
 
-    # Plot the points
+    #Plot the points
     ax.scatter(points1[:, 0], points1[:, 1], points1[:, 2], color='red', marker='o')
     ax.scatter(points2[:, 0], points2[:, 1], points2[:, 2], color='blue', marker='o')
 
-    # Connect points with vectors forming a loop
+    #Connect points with vectors forming a loop
     for i in range(len(points1) - 1):
         vector1 = points1[i + 1] - points1[i]
         ax.quiver(points1[i, 0], points1[i, 1], points1[i, 2], vector1[0], vector1[1], vector1[2],
                   color='blue', arrow_length_ratio=0.1)
 
-        # Connect starting and ending points in the same orientation
+        #Connect starting and ending points in the same orientation
         ax.plot([points1[i, 0], points1[i + 1, 0]], [points1[i, 1], points1[i + 1, 1]],
                 [points1[i, 2], points1[i + 1, 2]], color='blue')
         
@@ -42,11 +43,11 @@ def Linkage(list):
         ax.quiver(points2[i, 0], points2[i, 1], points2[i, 2], vector2[0], vector2[1], vector2[2],
                   color='red', arrow_length_ratio=0.1)
 
-        # Connect starting and ending points in the same orientation
+        #Connect starting and ending points in the same orientation
         ax.plot([points2[i, 0], points2[i + 1, 0]], [points2[i, 1], points2[i + 1, 1]],
                 [points2[i, 2], points2[i + 1, 2]], color='red')    
 
-    # Connect the last point to the first point to form a loop
+    #Connect the last point to the first point to form a loop
     last_vector1 = points1[0] - points1[-1]
     ax.quiver(points1[-1, 0], points1[-1, 1], points1[-1, 2], last_vector1[0], last_vector1[1], last_vector1[2],
               color='blue', arrow_length_ratio=0.1)
@@ -60,7 +61,7 @@ def Linkage(list):
             [points2[-1, 2], points2[0, 2]], color='red')
 
 
-   # Triangualtion
+   #Triangualtion
     triangles = []
     for i in range(1, len(points1)-1):
         triangle = points1[0], points1[i], points1[i+1]
@@ -117,7 +118,7 @@ def Linkage(list):
             if 0<=solution[t]<=1 and 0<=solution[u]<=1 and 0<=solution[v]<=1 and solution[u]+solution[v]<=1:
               print(solution)
               
-              #ORIENTATION OF THE SEIFERT SURFACE
+              #Orientation
               def Gradient_Vector(u_value,v_value):
                  P01=P1-P0
                  P02=P2-P0
@@ -156,7 +157,7 @@ def Linkage(list):
        Linking_Number=Linking_Number+i
     return abs(Linking_Number)   
     
-    # Set axis limits
+    #Set axis limits
     ax.set_xlim([min(points1[:, 0]) - 1, max(points1[:, 0]) + 1])
     ax.set_ylim([min(points1[:, 1]) - 1, max(points1[:, 1]) + 1])
     ax.set_zlim([min(points1[:, 2]) - 1, max(points1[:, 2]) + 1])
@@ -182,11 +183,20 @@ def Linkage(list):
    
 
 
-#VISUALISING THE LINKS
+#Register you data  
+Links=[[[(1, 0, 0),
+    (0.809016994375, 0.587785252292, 0),
+    (0.309016994375, 0.951056516295, 0),
+    (-0.309016994375, 0.951056516295, 0),
+    (-0.809016994375, 0.587785252292, 0)],[(-1, 0, 0),
+    (-0.809016994375, -0.587785252292, 0),
+    (-0.309016994375, -0.951056516295, 1),
+    (0.309016994375, -0.951056516295, 0),
+    (0.809016994375, -0.587785252292, 0)]],[[( -10 , 1 , 0 ),( -9 , 0 , 0 ),( -8 , 0 , 0 ),( -6 , 0 , 2 ),( -6 , 2 , 0 ),( -6 , 3 , 1 )
+,( -9 , 3 , 2 ),( -8 , 3 , 1 )],[( 0 , 0 , 6 ),( 1 , 0 , 5 ),( 3 , 0 , 4 ),( 4 , -3 , 3 ),( 4 , -5 , 4 ),( 3 , -5 , 6 ),( 2 , -4 , 6 ),( 1 , -2 , 6 )]]]
+
+#Call the function with the registered data
+print(Linkage(Links))
 plt.show()
-
-#END TIME
 end_time=time.time()
-
-#RUN TIME
 print(end_time-start_time)

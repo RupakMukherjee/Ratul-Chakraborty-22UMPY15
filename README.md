@@ -1,5 +1,8 @@
-This project focuses on developing a data-based numerical algorithm capable of computing the linking number of a two-component Hopf link and a two-component Unlink. The primary objective is to compare and distinguish between the two. Successfully computed, the linking numbers of the Hopf link and the Unlink provided a basis for differentiation using the code in the Linkage.py file.
+This project explores the mathematical study of knots and links in topology, focusing on differentiating between the two-component Unlink and the Hopf Link using a computational tool named LINKAGE. LINKAGE employs the linking number, calculated through Barycentric Equations, Matrix Algebra, and basic topological principles, to quantify the degree of linking between two closed curves in three-dimensional space. This approach not only distinguishes between different knot structures but also has applications in understanding complex systems such as magnetic field lines in plasma physics. Additionally, this project includes an example where multiple interlinked loops were analyzed over different time stamps using the LINKAGE algorithm. By observing how these links break and evolve, the algorithm demonstrates its ability to track changes in the topological properties of the system. Subsequently, the algorithm was generalized to compute the linking number (Helicity) for any given n-component Hopf link, where n=2,3,4,5, and so on.
+
 <br>
-Subsequently, the algorithm was generalized to compute the linking number (Helicity) for any given n-component Hopf link, where n=2,3,4,5, and so on. This generalization allows for the distinction between different components. The code for this generalized algorithm is provided in the n_component_HELICITY.py file.
+The python script for the linkage algorithm is included in the linkage folder.
 <br>
-Moving forward, we next aim for applying these algorithms to various data-driven physical phenomena.
+The python script for the example of interlinked loops is included in the interlinked folder.
+<br>
+The python script for the n-component Hopf link is included in the n-component folder.

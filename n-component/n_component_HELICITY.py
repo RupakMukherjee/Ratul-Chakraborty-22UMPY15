@@ -170,7 +170,7 @@ def n_component_Helicity(n_component_link):
             print(f'The Structure is a {r} component Hopf link with Helicity of {r-1}') 
     return r-1
                
-#Register your date
+#Register your data
 L1=[[(1.5, 2, 0.5), (0.5, 3, 3), (3, 3, 3), (3, 3, 0.5)],[(0, 6.5, 1.5), (0, 2.5, 1.5), (1.5, 0, 1.5),(1.5, 6.5, 1.5)]]
 L2=[[(1.5, 2, 0.5), (0.5, 3, 3), (3, 3, 3), (3, 3, 0.5)],[(0, 6.5, 1.5), (0, 2.5, 1.5), (1.5, 0, 1.5), (1.5, 6.5, 1.5)],[(2, 5, 0), (1, 6, 2), (4, 6, 2), (4, 6, 0)]]
 

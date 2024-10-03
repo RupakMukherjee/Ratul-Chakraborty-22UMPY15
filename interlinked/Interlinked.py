@@ -1,3 +1,6 @@
+#Follow the instructions given in the README.md file to run this script.
+
+#Requisites
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d.art3d import Poly3DCollection
 import time
@@ -6,14 +9,12 @@ import numpy as np
 import sympy as sp
 from itertools import combinations
 t,u,v=sp.symbols('t u v')
-
-
 start_time=time.time()
 
 
 def Plot(data):
    
-    # Create a 3D plot
+    #Create a 3D plot
   fig = plt.figure()
   ax = fig.add_subplot(111, projection='3d')
 
@@ -21,10 +22,10 @@ def Plot(data):
     # Extract points from the dataset
      points = np.array(dataset)
     
-    # Plot the points
+    #Plot the points
      ax.scatter(points[:, 0], points[:, 1], points[:, 2],  marker='o')
 
-    # Connect points with vectors forming a loop
+    #Connect points with vectors forming a loop
      for i in range(len(points) - 1):
         vector = points[i + 1] - points[i]
         ax.quiver(points[i, 0], points[i, 1], points[i, 2], vector[0], vector[1], vector[2],
@@ -32,19 +33,19 @@ def Plot(data):
         ax.plot([points[i, 0], points[i + 1, 0]], [points[i, 1], points[i + 1, 1]],
                 [points[i, 2], points[i + 1, 2]])
 
-    # Connect the last point to the first point to form a loop
+    #Connect the last point to the first point to form a loop
      last_vector = points[0] - points[-1]
      ax.quiver(points[-1, 0], points[-1, 1], points[-1, 2], last_vector[0], last_vector[1], last_vector[2],
                arrow_length_ratio=0.1)
      ax.plot([points[-1, 0], points[0, 0]], [points[-1, 1], points[0, 1]],
             [points[-1, 2], points[0, 2]])
 
-    # Calculate axis limits based on the points
+    #Calculate axis limits based on the points
      min_x, max_x = points[:, 0].min(), points[:, 0].max()
      min_y, max_y = points[:, 1].min(), points[:, 1].max()
      min_z, max_z = points[:, 2].min(), points[:, 2].max()
 
-    # Increase margins slightly
+    #Increase margins slightly
      margin = 10.0
      ax.set_xlim([min_x - margin, max_x + margin])
      ax.set_ylim([min_y - margin, max_y + margin])
@@ -56,14 +57,14 @@ def Plot(data):
 def LINKING_NUMBER(dataset):
     points1=dataset[0]
     points2=dataset[1]
-    # Convert points to numpy array for easier manipulation
+    #Convert points to numpy array for easier manipulation
     points1 = np.array(points1)
     points2 = np.array(points2)
 
     
     
 
-   # Triangualtion
+   #Triangualtion
     triangles = []
     for i in range(1, len(points1)-1):
         triangle = points1[0], points1[i], points1[i+1]
@@ -120,7 +121,7 @@ def LINKING_NUMBER(dataset):
             if 0<=solution[t]<=1 and 0<=solution[u]<=1 and 0<=solution[v]<=1 and solution[u]+solution[v]<=1:
               print(solution)
               
-              #ORIENTATION OF THE SEIFERT SURFACE
+              #Orientation
               def Gradient_Vector(u_value,v_value):
                  P01=P1-P0
                  P02=P2-P0
@@ -159,21 +160,21 @@ def LINKING_NUMBER(dataset):
        Linking_Number=Linking_Number+i
     return abs(Linking_Number) 
 
-# Time Stamp Data 
+#Register your data 
 
-Time_stamp_5=[[( -9 , 0 , 0 ),( -8 , 0 , 0 ),( -6 , 0 , 2 ),( -6 , 2 , 0 ),( -6 , 3 , 1 ),( -9 , 3 , 2 ),( -8 , 3 , 1 )],[( 0 , 4 , 0 ),( 4 , 0 , 0 ),( 2.5 , -3 , 3 ),( 2.5 , -3 , 9 ),( -2 , -2 , 8 ),( -6 , 1 , 4 ),( -8 , 1.5 , 0 ),( -6 , 0 , -4 )],[( 0 , 0 , 0 ),( 1.5 , -1 , 0 ),( 1.5 , -1 , 3 ),( 0.5 , -0.5 , 14 ),( -4 , 0 , 3 ),( 2 , 5 , 2 )]]
+Time_stamp=[[( -9 , 0 , 0 ),( -8 , 0 , 0 ),( -6 , 0 , 2 ),( -6 , 2 , 0 ),( -6 , 3 , 1 ),( -9 , 3 , 2 ),( -8 , 3 , 1 )],[( 0 , 4 , 0 ),( 4 , 0 , 0 ),( 2.5 , -3 , 3 ),( 2.5 , -3 , 9 ),( -2 , -2 , 8 ),( -6 , 1 , 4 ),( -8 , 1.5 , 0 ),( -6 , 0 , -4 )],[( 0 , 0 , 0 ),( 1.5 , -1 , 0 ),( 1.5 , -1 , 3 ),( 0.5 , -0.5 , 14 ),( -4 , 0 , 3 ),( 2 , 5 , 2 )]]
 
 
-# Plotting the data
+#Plotting the data
 
 Plot(Time_stamp_5)
 
 
-# Generating different combination of loops
+#Generating different combination of loops
 
 def Identify_links(data):
     combinations_two_lists = [list(combination) for combination in combinations(data, 2)]
-    #print(combinations_two_lists)
+    
     Hopf_link=[]
     for combination in combinations_two_lists:
        
@@ -182,11 +183,7 @@ def Identify_links(data):
           Hopf_link.append(1)
     print("The number of links identified are ", len(Hopf_link))        
 
-
-Identify_links(Time_stamp_5)
-
-
+#Call Identify_links
+Identify_links(Time_stamp)
 end_time=time.time()
-
-# Run time 
 print(end_time-start_time)

@@ -1,3 +1,6 @@
+#Follow the instructions given in the README.md file to run this script using example datas provided in the linkage_data file
+
+
 #REQUIRED LIBRARIES AND SYMBOLS
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d.art3d import Poly3DCollection

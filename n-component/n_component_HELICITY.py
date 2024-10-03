@@ -101,7 +101,7 @@ def n_component_Helicity(n_component_link):
                 if 0<=solution[t]<=1 and 0<=solution[u]<=1 and 0<=solution[v]<=1 and solution[u]+solution[v]<=1:
                   print(solution)
               
-                  #ORIENTATION OF THE SEIFERT SURFACE
+                  #Orientation
                   def Gradient_Vector(u_value,v_value):
                      P01=P1-P0
                      P02=P2-P0

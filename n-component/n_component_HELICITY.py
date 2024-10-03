@@ -171,13 +171,13 @@ def n_component_Helicity(n_component_link):
     return r-1
                
 #Register your date
-Two_component_link=[[(1.5, 2, 0.5), (0.5, 3, 3), (3, 3, 3), (3, 3, 0.5)],[(0, 6.5, 1.5), (0, 2.5, 1.5), (1.5, 0, 1.5),(1.5, 6.5, 1.5)]]
-Three_component_link=[[(1.5, 2, 0.5), (0.5, 3, 3), (3, 3, 3), (3, 3, 0.5)],[(0, 6.5, 1.5), (0, 2.5, 1.5), (1.5, 0, 1.5), (1.5, 6.5, 1.5)],[(2, 5, 0), (1, 6, 2), (4, 6, 2), (4, 6, 0)]]
+L1=[[(1.5, 2, 0.5), (0.5, 3, 3), (3, 3, 3), (3, 3, 0.5)],[(0, 6.5, 1.5), (0, 2.5, 1.5), (1.5, 0, 1.5),(1.5, 6.5, 1.5)]]
+L2=[[(1.5, 2, 0.5), (0.5, 3, 3), (3, 3, 3), (3, 3, 0.5)],[(0, 6.5, 1.5), (0, 2.5, 1.5), (1.5, 0, 1.5), (1.5, 6.5, 1.5)],[(2, 5, 0), (1, 6, 2), (4, 6, 2), (4, 6, 0)]]
 
 
 #Comparison
-H1=n_component_Helicity(Two_component_link)
-H2=n_component_Helicity(Three_component_link)
+H1=n_component_Helicity(L1)
+H2=n_component_Helicity(L2)
 if H1==H2:
     print("THE OBTAINED TWO STRUCTURES ARE SAME")
 else:

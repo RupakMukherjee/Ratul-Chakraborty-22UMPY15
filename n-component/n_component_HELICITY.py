@@ -1,4 +1,6 @@
-#REQUIRED LIBRARIES AND SYMBOLS
+#Follow the instructions given in the README.md file to run this script.
+
+#Requisites
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d.art3d import Poly3DCollection
 import time
@@ -8,17 +10,16 @@ import copy
 import sympy as sp
 t,u,v=sp.symbols('t u v')
 
-#Helicity of N-component link (N=1,2,3,4,5,...........)
-
+#Helicity of n-component link (n=2,3,4,5,...........)
 def n_component_Helicity(n_component_link):
 
-    #DEEP COPY OF TH N-COMPONENT LINK
+    #Deep copy
     n_copy = copy.deepcopy(n_component_link)
     for i in range(len(n_copy)):
        n_copy[i].append([])
     
 
-    #VISUALISATION
+    #Visuals
     def Visualisation(points):
 
         points = np.array(points)
@@ -27,11 +28,11 @@ def n_component_Helicity(n_component_link):
           ax.plot([points[i, 0], points[i + 1, 0]], [points[i, 1], points[i + 1, 1]],[points[i, 2], points[i + 1, 2]])
           ax.plot([points[-1, 0], points[0, 0]], [points[-1, 1], points[0, 1]],[points[-1, 2], points[0, 2]])
 
-    # Create a 3D plot
+    #Create a 3D plot
     fig = plt.figure()
     ax = fig.add_subplot(111, projection='3d')
 
-    # Plot each loop with a different color
+    #Plot each loop with a different color
     for i in range(len(n_component_link)):
        Visualisation(n_component_link[i])
     plt.show()
@@ -39,11 +40,11 @@ def n_component_Helicity(n_component_link):
     #Linking Number
     def LINKING_NUMBER(points1,points2):
     
-        # Convert points to numpy array for easier manipulation
+        #Convert points to numpy array for easier manipulation
         points1 = np.array(points1)
         points2 = np.array(points2)
 
-        # Triangualtion
+        #Triangualtion
         triangles = []
         for i in range(1, len(points1)-1):
             triangle = points1[0], points1[i], points1[i+1]
@@ -100,7 +101,7 @@ def n_component_Helicity(n_component_link):
                 if 0<=solution[t]<=1 and 0<=solution[u]<=1 and 0<=solution[v]<=1 and solution[u]+solution[v]<=1:
                   print(solution)
               
-                  #ORIENTATION OF THE SEIFERT SURFACE
+                  #Orientation
                   def Gradient_Vector(u_value,v_value):
                      P01=P1-P0
                      P02=P2-P0
@@ -169,16 +170,14 @@ def n_component_Helicity(n_component_link):
             print(f'The Structure is a {r} component Hopf link with Helicity of {r-1}') 
     return r-1
                
-#Examples of Execution
-
-#INPUT DATA
-Two_component_link=[[(1.5, 2, 0.5), (0.5, 3, 3), (3, 3, 3), (3, 3, 0.5)],[(0, 6.5, 1.5), (0, 2.5, 1.5), (1.5, 0, 1.5),(1.5, 6.5, 1.5)]]
-Three_component_link=[[(1.5, 2, 0.5), (0.5, 3, 3), (3, 3, 3), (3, 3, 0.5)],[(0, 6.5, 1.5), (0, 2.5, 1.5), (1.5, 0, 1.5), (1.5, 6.5, 1.5)],[(2, 5, 0), (1, 6, 2), (4, 6, 2), (4, 6, 0)]]
+#Register your data
+L1=[[(1.5, 2, 0.5), (0.5, 3, 3), (3, 3, 3), (3, 3, 0.5)],[(0, 6.5, 1.5), (0, 2.5, 1.5), (1.5, 0, 1.5),(1.5, 6.5, 1.5)]]
+L2=[[(1.5, 2, 0.5), (0.5, 3, 3), (3, 3, 3), (3, 3, 0.5)],[(0, 6.5, 1.5), (0, 2.5, 1.5), (1.5, 0, 1.5), (1.5, 6.5, 1.5)],[(2, 5, 0), (1, 6, 2), (4, 6, 2), (4, 6, 0)]]
 
 
-# FOR COMPARISION OF TWO DIFFERENT N-COMPONENT LINKS
-H1=n_component_Helicity(Two_component_link)
-H2=n_component_Helicity(Three_component_link)
+#Comparison
+H1=n_component_Helicity(L1)
+H2=n_component_Helicity(L2)
 if H1==H2:
     print("THE OBTAINED TWO STRUCTURES ARE SAME")
 else:

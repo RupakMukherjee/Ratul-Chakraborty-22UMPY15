@@ -1,4 +1,4 @@
-#Follow the instructions given in the README.md file to run this script using example datas provided in the linkage_data file
+#Follow the instructions given in the README.md file to run this script using example datas provided in the linkage_data.txt file
 
 
 #Requisites
@@ -183,7 +183,7 @@ def Linkage(list):
    
 
 
-#Register you data  
+#Register your data  
 Links=[[[(1, 0, 0),
     (0.809016994375, 0.587785252292, 0),
     (0.309016994375, 0.951056516295, 0),

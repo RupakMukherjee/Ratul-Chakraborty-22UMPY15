@@ -46,7 +46,8 @@ p {
 /* Image styling */
 .image-gallery {
     display: flex;
-    justify-content: space-around;
+    justify-content: center; /* Center images horizontally */
+    align-items: center; /* Align items vertically */
     flex-wrap: wrap;
     margin-top: 20px;
 }
@@ -61,6 +62,8 @@ p {
     max-width: 100%;
     height: auto;
     display: block;
+    margin-left: auto;
+    margin-right: auto; /* Center the images inside the figures */
 }
 
 .image-center {

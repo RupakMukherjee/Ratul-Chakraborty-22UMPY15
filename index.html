@@ -23,17 +23,52 @@
         <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
             <div class="container px-4 px-lg-5">
                 <a class="navbar-brand" href="#page-top">THIS PAGE IS UNDER CONSTRUCTION</a>
-                <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto my-2 my-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#services">Knowledge</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#portfolio">Projects</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                        <!-- About Dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                About
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                                <li><a class="dropdown-item" href="introduction_page/newpage.html">Introduction</a></li>
+                                
+                            </ul>
+                        </li>
+                        <!-- Topology Dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="topologyDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Topology
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="topologyDropdown">
+                                <li><a class="dropdown-item" href="topology-intro.html">Introduction to Topology</a></li>
+                                <li><a class="dropdown-item" href="topology-knots.html">Knots in Topology</a></li>
+                                <li><a class="dropdown-item" href="topology-links.html">Links in Topology</a></li>
+                            </ul>
+                        </li>
+                        <!-- Projects Dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="projectsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Projects
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="projectsDropdown">
+                                <li><a class="dropdown-item" href="project-1.html">Project 1</a></li>
+                                <li><a class="dropdown-item" href="project-2.html">Project 2</a></li>
+                                <li><a class="dropdown-item" href="project-3.html">Project 3</a></li>
+                            </ul>
+                        </li>
+                        <!-- Contact -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
                     </ul>
                 </div>
             </div>
         </nav>
+        
         <!-- Masthead-->
         <header class="masthead">
             <div class="container px-4 px-lg-5 h-100">
@@ -54,7 +89,7 @@
             <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-lg-8 text-center">
-                        <h2 class="text-white mt-0">About</h2>
+                        <h2 class="text-white mt-0">ABOUT</h2>
                         <hr class="divider divider-light" />
                         <p class="text-white-75 mb-4">LINKAGE is a computational tool focusing on differentiating between the two-component Unlink and the Hopf Link. LINKAGE employs the linking number, calculated through Barycentric Equations, Matrix Algebra, and basic topological principles, to quantify the degree of linking between two closed curves in three-dimensional space.</p>
                         <a class="btn btn-light btn-xl" href="introduction_page/newpage.html">In-depth explanation</a>
@@ -66,7 +101,7 @@
         <!-- Services-->
         <section class="page-section" id="services">
             <div class="container px-4 px-lg-5">
-                <h2 class="text-center mt-0">Background</h2>
+                <h2 class="text-center mt-0">TOPOLOGY</h2>
                 <hr class="divider" />
                 <div class="row gx-4 gx-lg-5">
                     <div class="col-lg-3 col-md-6 text-center">

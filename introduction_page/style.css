@@ -54,7 +54,8 @@ figure {
 
 figure div {
     flex: 1;
-    margin: 0 10px;
+    padding: 0 10px;
+    text-align: center;
 }
 
 figure img {
@@ -73,7 +74,7 @@ figcaption {
     text-align: center;
     font-size: 0.9em;
     color: #7f8c8d;
-    margin-top: 5px;
+    margin-top: 10px;
     font-style: italic;
 }
 

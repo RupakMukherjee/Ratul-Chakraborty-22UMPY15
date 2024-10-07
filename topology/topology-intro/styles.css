@@ -6,7 +6,6 @@ body {
     margin: 0;
     padding: 20px;
     line-height: 1.7;
-    text-align: center; /* Center-align all text by default */
 }
 
 /* Container for content */
@@ -17,7 +16,6 @@ section {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    text-align: left; /* Reset text alignment for content inside sections */
 }
 
 /* Headings */
@@ -26,7 +24,6 @@ h1, h2 {
     color: #2c3e50;
     margin-bottom: 10px;
     text-transform: uppercase;
-    text-align: center; /* Center-align the headings */
 }
 
 h1 {
@@ -45,7 +42,7 @@ h2 {
 p {
     font-size: 1.1em;
     margin-bottom: 20px;
-    text-align: justify; /* Justify text in paragraphs */
+    text-align: justify;
 }
 
 /* Links */
@@ -65,7 +62,6 @@ footer {
     padding: 10px;
     font-size: 0.9em;
     color: #7f8c8d;
-    text-align: center; /* Ensure footer text is centered */
 }
 
 /* Responsive Design */

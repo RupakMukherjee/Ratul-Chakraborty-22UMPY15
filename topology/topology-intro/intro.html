@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Brief Introduction to Topology</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>A Brief Introduction to Topology</h1>
+    </header>
+    <section>
+        <p>Imagine holding a rubber band in your hands. You have the freedom to play around with it however you like – stretch it, twist it, bend it – basically, deform it from its original round and circular shape. Here, two fascinating things come into play.</p>
+
+        <p>Firstly, all your deformations are smooth and continuous. You deform the band in a flexible manner, allowing for seamless transformations. This is a matter of common sense and something we intuitively understand.</p>
+
+        <p>Secondly, there are inherent properties of that original, circular rubber band that remain unchanged, no matter how much you twist, bend, or stretch it. These unique qualities persist in every deformed shape, holding a constant presence amid the transformations.</p>
+
+        <p>Now, this might not be immediately apparent, but this nature of objects is at the heart of the study of knots and links. Think of knots as deformed rubber bands or envision two distinct rubber bands intricately tangled in such a messy link that it is nearly impossible to un-link them. We have such kind of situations with different objects from our day to day life like ropes, electric wires, shoelaces, threads and many more. And it is this interplay of deformations and unchanging properties that makes the study of knots and links both intriguing and crucial in the world of mathematics.</p>
+
+        <p>So, the lesson learnt from the rubber band experience above can be expressed in a single line. There exist objects which when subjected to smooth seamless transformations, or I should rather say continuous deformations, does not tend to change some properties inherent to it no matter how rigorous the processes of the deformations are.</p>
+
+        <p>And the field of mathematics which is concerned with such properties of geometric objects, like ropes, wires and threads, that are preserved under continuous deformations, such as stretching, twisting, crumpling, and bending, without closing holes, opening holes, tearing, gluing, or passing through itself is called <em>Topology</em>. In the language of Topology, the rubber band is called a <em>Topological Space</em>, the continuous deformations, that transforms one shape of the rubber band to another, are regarded as <em>Homeomorphism</em> and the properties of the rubber band that remains preserved under such deformations are called <em>Topological Invariants</em>. Let's try to understand these keywords one by one in somewhat detail, because this is going to aid us in understanding the main algorithm, LINKAGE, later.</p>
+    </section>
+
+    <section>
+        <h2>What are Topological Spaces?</h2>
+        <p><strong><em{Definition:</em></strong> Let X be a set. A topology T on X is a collection of subsets of X such that:</p>
+        <ol>
+            <li>Both the empty set <em>&empty;</em> and X are in T:
+                <br><em>&empty;, X &in; T</em>
+            </li>
+            <li>The intersection of finitely many sets in T is also in T:
+                <br><em>If U<sub>1</sub>, U<sub>2</sub>, ..., U<sub>n</sub> &in; T, then U<sub>1</sub> &cap; U<sub>2</sub> &cap; ... &cap; U<sub>n</sub> &in; T</em>
+            </li>
+            <li>The union of any collection of sets in T is also in T:
+                <br><em>If {U<sub>&alpha;</sub>}<sub>&alpha; &in; I</sub> &subseteq; T, then <em>&cup;</em><sub>&alpha; &in; I</sub> U<sub>&alpha;</sub> &in; T</em>
+            </li>
+        </ol>
+        <p>The pair (X, T) is called a Topological Space. The sets in T are called open sets, and the elements of X are called points.</p>
+        
+        <p>The definition is too technical for us to understand, let's use the example of a rubber band to simplify the technicalities and enhance our understanding.</p>
+
+        <p>We can envision the rubber band as a collection of infinitely many points, each with a unique location on the band, which is continuous in its structure. Since continuous structures are considered to be infinitely discretized, to facilitate visualization, let's discretize the continuous band with discrete points, labeling them as A, B, C, and so on. The set X represents all these points, X = {A, B, C, ...}, where each element is a point on the rubber band.</p>
+
+        <p>Now, consider dividing the band into small segments or arcs. Each arc contains numerous points. Deforming one of these segments—whether by stretching, twisting, or bending—while keeping the rest of the band unchanged constitutes a small deformation to the entire band. Each small segment is what we call as an "open set." The whole band itself can be considered an open set if treated as a single segment and deformed accordingly. Note that a deformed rubber band is nothing but a combination of deformations of these small segments.</p>
+
+        <p>When we talk about closeness between two points, we don't rely on the geometric concept of distance. Instead, if two points lie on the same segment or open set, we consider them close. This topological closeness remains even if the points geometrically move away from each other due to stretching.</p>
+
+        <p>Here are some rules for open sets:</p>
+        <ul>
+            <li>The entire rubber band is always an open set.</li>
+            <li>Any combination (union) of open sets is also an open set.</li>
+            <li>Intersections of open sets are open.</li>
+        </ul>
+
+        <p>Therefore, deforming the rubber band involves moving points within open sets. Points on the same arc are considered close, while points in different arcs might not be close. Tearing or gluing is strictly forbidden, emphasizing the continuity of deformations.</p>
+
+        <p>In conclusion, the rubber band, along with the defined open sets, forms a topological space. Any geometric object that can be treated similarly becomes a topological space. This concept allows us to discuss the closeness of points based on their configurations, capturing the essence of topology without resorting to precise measurements.</p>
+    </section>
+
+    <section>
+        <h2>Homeomorphism: A mapping between two Topological Spaces</h2>
+        <p>Now that we have a clear grasp of the concept of topological spaces, let us delve into another key concept, namely Homeomorphism, which serves as the connection between two topological spaces.</p>
+
+        <p><em><strong{Definition:}</strong></em> A function f: X → Y between two topological spaces is a homeomorphism if it satisfies the following properties:</p>
+        <ol>
+            <li>f is a bijection (one-to-one and onto),</li>
+            <li>f is continuous,</li>
+            <li>The inverse function f<sup>−1</sup> is continuous (i.e., f is an open mapping).</li>
+        </ol>
+
+        <p>A homeomorphism is sometimes referred to as a bicontinuous function. If such a function exists, we say that X and Y are homeomorphic. A self-homeomorphism is a homeomorphism from a topological space onto itself. The notion of being "homeomorphic" establishes an equivalence relation on topological spaces, with its equivalence classes termed homeomorphism classes.</p>
+
+        <h3>The Rubber Band Analogy</h3>
+        <p>To elucidate this technical definition, let's consider the example of a rubber band. Imagine taking the rubber band and deforming it into some random intricate shape. In this scenario, both the original shape and the deformed shape represent two distinct topological spaces. Suppose we have a method to isolate the original and deformed shapes independently. Deeping both the structures into the tanks of 3D rectangular coordinate space, each point on these structures gets painted with distinct coordinate points, each with x, y, and z values. A homeomorphism, in this context, is such a function that when it takes input coordinate points from the original shape, it reproduces outputs that are destined coordinated points of the deformed shape. The function is one-to-one, signifying that each distinct point on the original shape corresponds to a unique point on the deformed shape. It is onto, meaning that every distinct point on the deformed shape has a corresponding point on the original shape. Consequently, the function is bijective. Furthermore, the function must be continuous as the input coordinate points come from a continuous topological space. This ensures that every point is mapped in a way that the deformed shape remains continuous without any holes or tears appearing during the mapping process.</p>
+
+        <h3>Invariance of Topological Properties</h3>
+        <p>To understand homeomorphism effectively, let's consider the essential properties of topological spaces that remain unchanged under homeomorphisms, leading us to the concept of topological invariants.</p>
+
+        <p>Some fundamental properties that remain invariant under homeomorphisms include:</p>
+        <ul>
+            <li>Connectedness: A space is connected if it cannot be divided into two disjoint open sets. If one topological space is connected, its homeomorphic counterpart must also be connected.</li>
+            <li>Compactness: A space is compact if every open cover has a finite subcover. Compact spaces remain compact when mapped through a homeomorphism.</li>
+            <li>Path-connectedness: A space is path-connected if any two points can be connected by a continuous path. Homeomorphic spaces retain this property.</li>
+            <li>Genus: The number of holes in a surface is invariant. A torus has one hole, while a sphere has none; homeomorphic objects will maintain this genus characteristic.</li>
+        </ul>
+
+        <p>These invariants allow mathematicians to classify and study topological spaces based on their underlying properties. Ultimately, homeomorphism plays a pivotal role in establishing equivalences between seemingly distinct topological spaces while preserving their essential characteristics.</p>
+    </section>
+
+    <section>
+        <h2>Topological Invariants</h2>
+        <p>To wrap up this discussion, we will delve into what topological invariants are and how they allow us to differentiate between various topological spaces.</p>
+
+        <p>Topological invariants are properties of a topological space that remain unchanged under homeomorphism. They act as a tool for mathematicians to discern between different topological spaces and establish classifications. Some notable examples include:</p>
+        <ul>
+            <li>Betti Numbers: These numbers indicate the maximum number of cuts that can be made without separating the space into distinct components.</li>
+            <li>Homotopy Groups: These groups represent the different ways a loop can be continuously deformed in a space.</li>
+            <li>Euler Characteristic: This characteristic connects the number of vertices, edges, and faces of a polyhedron.</li>
+            <li>Fundamental Group: It measures the space's loop structure, providing insights into the pathways within a space.</li>
+        </ul>
+
+        <p>These invariants help classify topological spaces into homeomorphism classes, showcasing their intricate and unique structures. Understanding topological invariants opens doors to various applications, from algebraic topology to knot theory, where we analyze the properties of knots and links under continuous transformations.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Rupak Mukherjee. All rights reserved.</p>
+    </footer>
+</body>
+</html>

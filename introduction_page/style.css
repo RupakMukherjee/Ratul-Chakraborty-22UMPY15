@@ -83,17 +83,6 @@ figcaption {
     text-align: center;
 }
 
-/* Ensure responsiveness on smaller screens */
-@media screen and (max-width: 768px) {
-    .image-figure {
-        flex-direction: column;
-    }
-
-    .image-container {
-        padding-bottom: 15px;
-    }
-}
-
 
 /* Links */
 a {
@@ -131,13 +120,13 @@ footer {
     p {
         font-size: 1em;
     }
-
-    figure {
-        flex-direction: column;
-        align-items: flex-start;
+    
+    .image-figure {
+            flex-direction: column;
     }
-
-    figure div {
-        margin-bottom: 15px;
+    
+    .image-container {
+            padding-bottom: 15px;
     }
+   
 }

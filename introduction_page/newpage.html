@@ -59,16 +59,17 @@
         <p>
             A tool that can measure the variation in helicity over time would thus be able to quantify the resistivity of the medium. For this, the tool must be capable of distinguishing between a configuration where the magnetic field lines are linked and one where the links have been broken over time. The simplest example of a linked magnetic field structure is the Hopf Link, which consists of two interlinked loops. If this structure breaks apart, it results in two separate, unlinked rings, known as the Unlink. Detecting such a transition is crucial for understanding how helicity evolves in viscous media.
         </p>
-        <figure>
-            <div style="flex: 1; padding-right: 10px;">
+        <figure class="image-figure">
+            <div class="image-container">
                 <img src="img/hpfring.png" alt="Hopf ring">
                 <figcaption>Hopf ring</figcaption>
             </div>
-            <div style="flex: 1; padding-left: 10px;">
+            <div class="image-container">
                 <img src="img/un.png" alt="Unlink">
                 <figcaption>Unlink</figcaption>
             </div>
         </figure>
+        
         <p>
             To address this challenge, a computational tool called LINKAGE has been developed. LINKAGE utilizes a topological concept known as the linking number, a numerical value that quantifies the degree of linking between two closed loops in three-dimensional space. By applying Barycentric Equations for Lines and Planes, matrix algebra, and foundational principles of topology, LINKAGE constructs an efficient algorithm capable of calculating the linking number for any given pair of loops. Through this process, subtle differences between the Unlink and the Hopf Link are identified and quantified, much like how DNA fingerprinting distinguishes between individuals based on genetic markers.
         </p>

@@ -45,38 +45,55 @@ p {
 }
 
 /* Figure Styling */
-figure {
+/* Styling for the figure container */
+.image-figure {
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Center the images horizontally */
     align-items: center;
-    margin: 30px 0;
+    margin: 20px 0;
 }
 
-figure div {
+/* Styling for individual image containers */
+.image-container {
     flex: 1;
-    padding: 0 10px;
-    text-align: center;
+    padding: 0 15px;
+    text-align: center; /* Center-aligns the captions */
 }
 
-figure img {
-    max-width: 100%;
+/* Styling for images */
+.image-container img {
+    max-width: 100%; /* Make sure the image doesn't overflow */
     height: auto;
     border: 2px solid #ecf0f1;
     border-radius: 5px;
     transition: transform 0.3s ease-in-out;
 }
 
-figure img:hover {
+/* Image hover effect */
+.image-container img:hover {
     transform: scale(1.05);
 }
 
+/* Styling for the figcaption */
 figcaption {
-    text-align: center;
+    margin-top: 10px;
     font-size: 0.9em;
     color: #7f8c8d;
-    margin-top: 10px;
     font-style: italic;
+    text-align: center;
 }
+
+/* Ensure responsiveness on smaller screens */
+@media screen and (max-width: 768px) {
+    .image-figure {
+        flex-direction: column;
+    }
+
+    .image-container {
+        padding-bottom: 15px;
+    }
+}
+
 
 /* Links */
 a {

@@ -31,6 +31,18 @@ h3.subheading {
     margin-bottom: 10px;
 }
 
+h4.subheading {
+    font-size: 1.75em;
+    color: #34495e;
+    margin-bottom: 10px;
+}
+
+h5.subheading {
+    font-size: 1.75em;
+    color: #34495e;
+    margin-bottom: 10px;
+}
+
 p {
     font-size: 1.1em;
     color: #555;

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study of Multiple Interlinked Loops Using LINKAGE</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <section class="page-section">
+        <div class="container">
+            <h2 class="main-heading">Study of Multiple Interlinked Loops Using LINKAGE</h2>
+            <hr class="divider">
+
+            <p>In this section, we extend the study from two component structures to multiple component structures. We explore the potential of such linking number algorithms for studying structures involving multiple interlinked loops. The complex structure we consider is shown in Figure 18 below.</p>
+            
+            <div class="image-gallery">
+                <div class="gallery-item">
+                    <img src="images/interlinked3.png" alt="Four loops interlinked with each other.">
+                    <figcaption>Figure 1: Four loops interlinked with each other.</figcaption>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/interlinked.png" alt="Removing one loop reduces the number of links from three to one.">
+                    <figcaption>Figure 2: Removing one loop reduces the number of links from three to one.</figcaption>
+                </div>
+            </div>
+
+            <p>The data points have been manually selected to create a structure with four interlinked loops. This example is kept simple for ease of understanding, though the method can be extended to more complex structures with additional loops. We can consider these loops as magnetic field lines evolving over time, with the depicted structure representing one instance in their evolution. At this instance, there are three distinct links present, which we attempt to count using our algorithm. A subroutine within the algorithm calculates the linking number for any given pair of loops. By extending this algorithm to loop over all possible pairs within the structure, we can determine the total number of links at a particular moment. The output is shown below.</p>
+
+            <pre class="code-block">
+# Output Figure 1
+The number of links identified is 3
+            </pre>
+
+            <p>Next, we remove one loop, as shown above, which can be thought of as representing the breaking of magnetic field lines during their evolution. This removal reduces the number of links from three to one, a change accurately captured by the algorithm.</p>
+
+            <pre class="code-block">
+# Output Figure 2
+The number of links identified is 1
+            </pre>
+
+            <p>This approach allows us to track how the number of links in a system changes over time, revealing whether the count increases or decreases at different time instances.</p>
+
+        </div>
+    </section>
+
+</body>
+</html>

@@ -54,6 +54,7 @@ p {
 .gallery-item {
     min-width: 150px; /* Sets a minimum width for each image */
     flex: 0 0 auto; /* Prevents the item from growing or shrinking */
+    transition: transform 0.3s ease; /* Smooth scaling transition */
 }
 
 .gallery-item img {
@@ -61,6 +62,16 @@ p {
     height: auto;
     border: 2px solid #ddd;
     border-radius: 10px;
+    transition: border-color 0.3s ease; /* Smooth border color transition */
+}
+
+/* Hover effects */
+.gallery-item:hover {
+    transform: scale(1.05); /* Slightly scale the image on hover */
+}
+
+.gallery-item:hover img {
+    border-color: #3498db; /* Change border color on hover */
 }
 
 /* Caption styling */

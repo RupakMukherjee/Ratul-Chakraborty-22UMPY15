@@ -44,17 +44,16 @@ p {
 /* Image gallery styling */
 .image-gallery {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin-top: 30px;
+    flex-direction: row; /* Align items in a single row */
+    justify-content: center; /* Center the items */
+    overflow-x: auto; /* Allows horizontal scrolling if necessary */
+    padding: 10px; /* Adds padding around the gallery */
+    gap: 15px; /* Adds space between items */
 }
 
 .gallery-item {
-    width: 45%;
-    margin-bottom: 30px;
-    text-align: center;
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out;
+    min-width: 150px; /* Sets a minimum width for each image */
+    flex: 0 0 auto; /* Prevents the item from growing or shrinking */
 }
 
 .gallery-item img {
@@ -62,18 +61,9 @@ p {
     height: auto;
     border: 2px solid #ddd;
     border-radius: 10px;
-    transition: transform 0.3s ease;
 }
 
-/* Hover effect: scale the image on hover */
-.gallery-item:hover {
-    transform: scale(1.05);
-}
-
-.gallery-item img:hover {
-    transform: scale(1.1);
-}
-
+/* Caption styling */
 figcaption {
     font-style: italic;
     color: #666;
@@ -100,7 +90,7 @@ figcaption {
     }
 
     .gallery-item {
-        width: 100%;
+        min-width: 100px; /* Adjusts minimum width for smaller screens */
     }
 
     .code-block {

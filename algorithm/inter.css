@@ -1,0 +1,109 @@
+/* General styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Page section styling */
+.page-section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.container {
+    width: 85%;
+    margin: 0 auto;
+}
+
+/* Main heading */
+.main-heading {
+    font-size: 2.5em;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+/* Divider styling */
+.divider {
+    width: 60px;
+    height: 3px;
+    background-color: #2c3e50;
+    margin: 20px auto;
+}
+
+/* Paragraph styling */
+p {
+    font-size: 1.1em;
+    color: #555;
+    text-align: justify;
+}
+
+/* Image gallery styling */
+.image-gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.gallery-item {
+    width: 45%;
+    margin-bottom: 30px;
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect: scale the image on hover */
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+.gallery-item img:hover {
+    transform: scale(1.1);
+}
+
+figcaption {
+    font-style: italic;
+    color: #666;
+    margin-top: 10px;
+}
+
+/* Code block styling */
+.code-block {
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    padding: 15px;
+    font-family: 'Courier New', Courier, monospace;
+    color: #333;
+    text-align: left;
+    margin: 20px auto;
+    width: 85%;
+    border-radius: 5px;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    .gallery-item {
+        width: 100%;
+    }
+
+    .code-block {
+        width: 100%;
+    }
+}

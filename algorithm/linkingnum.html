@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numerical Computation of Linking Number</title>
+    <link rel="stylesheet" href="linknum.css"> <!-- Link to external CSS file -->
+</head>
+<body>
+    <div class="container">
+        <h1>Numerical Computation of Linking Number</h1>
+
+        <div class="images"></div>
+            <figure>
+                <img src="image/scheme1.jpg" alt="Algorithm" />
+                <figcaption>Algorithm</figcaption>
+            </figure>
+            
+        </div>
+        <p>To implement the above idea in a machine language we can ask ourselves a few important questions. These questions are discussed below one by one.</p>
+
+        <h2>Should we keep our loops (both red and blue) continuous or should we discretize them?</h2>
+
+        <p>If we want to keep the loops continuous, then we have to feed the algorithm the exact equations of the loops every time we compute. Two differently deformed unlinks will have different equations, and feeding the exact equations is easier for completely circular loops but becomes immensely difficult for much more complex deformations of the same. Ensuring an input for the algorithm becomes difficult this way, and thus, we should avoid relying on a continuous approach. Well then, how does discretization help in this matter?</p>
+
+        <p>What we mean by discretization of the loop is having a certain number of discrete points (data points) on the continuous loop and then joining each point with a straight line. The Figures below illustrate an example of a discretized unlink and a discretized Hopf link.</p>
+
+        <div class="images">
+            <figure>
+                <img src="image/4.png" alt="Discretized Unlink" />
+                <figcaption>Discretized Unlink</figcaption>
+            </figure>
+            <figure>
+                <img src="image/1.png" alt="Discretized Hopf Link" />
+                <figcaption>Discretized Hopf Link</figcaption>
+            </figure>
+        </div>
+
+        <h2>How do we obtain the Seifert surface associated with the blue loop?</h2>
+        <pre><code>
+        Algorithm 1: Constructing the Seifert Surface of the Blue Loop
+        1. Initialize an empty list for triangles: triangles = []
+        2. Loop through points in points1 to create triangles.
+        3. Create a 3D polygon from triangles using Poly3DCollection.
+        </code></pre>
+
+        <p>The Seifert surface obtained is not a smooth surface, rather it is a discrete triangulated approximation of the same. An example for the Hopf link is shown below:</p>
+
+        <figure>
+            <img src="image/11.png" alt="Seifert Surface" />
+            <figcaption>The triangulated Seifert surface associated with the blue loop</figcaption>
+        </figure>
+        
+        <figure>
+            <img src="image/scheme2.jpg" alt="Triangulation" />
+            <figcaption>Triangulation</figcaption>
+        </figure>
+
+        <h2>Crossing the Seifert surface: top to bottom and bottom to top</h2>
+
+        <pre><code>
+        Algorithm 2: Barycentric Plane and Line Equations for Finding Crossing Points
+        1. Compute barycentric line equations for red vectors.
+        2. Solve line equation for red vectors crossing blue triangles.
+        </code></pre>
+        <figure></figure>
+            <img src="image/scheme3.jpg" alt="Orientation" />
+            <figcaption>Orientation</figcaption>
+        </figure>
+        <h2>How do we compute the linking number for both the links?</h2>
+        <p>If the crossing is from bottom to top, append +1, and -1 for top to bottom crossings. Sum the values to get the linking number, which is 1 for a Hopf link and 0 for an unlink.</p>
+        <p>For each triangular surface, the code solves the line equation for all red vectors. If the solution lies inside the triangle, it prints the result; otherwise, it prints "Solution does not exist." This process repeats for all triangular surfaces in a loop to compute crossing points. Vectors lying on the same plane as a triangle, whether inside or outside, are not considered crossing, so the code returns "Solution does not exist" in such cases. Next. we utilize the direction of the gradient vector to the surface at the point of intersection, to determine the direction of crossing.</p>
+        <p>We compute the angle between the normal vector of the Seifert surface and the vector that crosses the Seifert surface to determine if the crossing is positive or negative. This helps in understanding the orientation of the Seifert surface. The angle is calculated using the dot product and normalized vectors, with results printed to show the orientation in Linking List. If the angle falls within the range $[0,90)$ or $(270,360]$, the red vector is considered to have crossed the surface from the bottom to the top side. Conversely, if the angle is in the range $(90,270)$, the red vector is considered to have crossed the surface from the top to the bottom side. This is how the orientation is determined. The code then prints the value of the angle.</p>
+        <div class="images"></div>
+            <figure>
+                <img src="image/scheme4.jpg" alt="Workflow of the Algorithm" />
+                <figcaption>Workflow of the Algorithm</figcaption>
+            </figure>
+            
+        </div>
+    </div>
+</body>
+</html>

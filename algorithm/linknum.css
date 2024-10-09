@@ -5,6 +5,7 @@ body {
     padding: 0;
     background-color: #f4f4f4;
     color: #333;
+    text-align: center; /* Center all text on the page */
 }
 
 .container {
@@ -13,62 +14,58 @@ body {
     padding: 20px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center; /* Ensure all content inside the container is centered */
 }
 
 h1, h2 {
     color: #2c3e50;
-    text-align: center; /* Center headings */
-    text-decoration: underline; /* Underline main headings */
+    text-decoration: underline; /* Underline the main headings */
 }
 
 p {
     line-height: 1.6;
     margin: 10px 0;
-    text-align: center; /* Center paragraph text */
 }
 
-pre, code {
+pre {
     background-color: #f7f7f7;
     padding: 15px;
     border-radius: 5px;
-    text-align: left; /* Keep code block text aligned to the left */
     overflow-x: auto;
-    display: inline-block; /* Ensure proper centering inside container */
-    max-width: 100%;
+    display: inline-block; /* Center the code block */
+    text-align: left; /* Ensure code content remains left-aligned */
 }
 
 .images {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
+    flex-wrap: wrap; /* Ensure the images wrap if they overflow */
+    margin: 20px 0;
 }
 
 .images figure {
     margin: 10px;
     text-align: center;
-    max-width: 100%; /* Ensure figure does not exceed container width */
+    max-width: 300px; /* Ensure the images don't go out of bounds */
 }
 
 .images img {
-    max-width: 100%;
+    width: 100%; /* Ensure the image fits within its container */
     height: auto;
     border: 1px solid #ccc;
     border-radius: 5px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .images img:hover {
-    transform: scale(1.05); /* Zoom in on hover */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Add shadow effect on hover */
+    transform: scale(1.05); /* Slight zoom-in effect */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Adds a shadow on hover */
 }
 
 figcaption {
     font-size: 0.9em;
     color: #666;
     margin-top: 5px;
-    text-align: center; /* Ensure captions are centered */
+    text-align: center;
 }
 
 code {
@@ -76,4 +73,9 @@ code {
     background-color: #f0f0f0;
     padding: 5px;
     border-radius: 3px;
+}
+
+.container img {
+    max-width: 100%; /* Ensure images never go out of container bounds */
+    height: auto;
 }

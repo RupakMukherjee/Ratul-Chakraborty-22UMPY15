@@ -18,11 +18,13 @@ body {
 h1, h2 {
     text-align: center;
     color: #2c3e50;
+    text-decoration: underline; /* Underline the main heading */
 }
 
 p {
     line-height: 1.6;
     margin: 10px 0;
+    text-align: center; /* Center the text content */
 }
 
 pre {
@@ -34,21 +36,23 @@ pre {
 
 .images {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    flex-wrap: wrap; /* Ensure the images wrap if they overflow */
     margin: 20px 0;
 }
 
 .images figure {
-    margin: 0;
+    margin: 10px; /* Add some space between images */
     text-align: center;
+    max-width: 300px; /* Ensure the images don't go out of bounds */
 }
 
 .images img {
-    max-width: 100%;
+    width: 100%; /* Ensure the image fits within its container */
     height: auto;
     border: 1px solid #ccc;
     border-radius: 5px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added for smooth transition */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .images img:hover {
@@ -60,6 +64,7 @@ figcaption {
     font-size: 0.9em;
     color: #666;
     margin-top: 5px;
+    text-align: center; /* Center the figcaption text */
 }
 
 code {
@@ -67,4 +72,9 @@ code {
     background-color: #f0f0f0;
     padding: 5px;
     border-radius: 3px;
+}
+
+.container img {
+    max-width: 100%; /* Ensure images never go out of container bounds */
+    height: auto;
 }

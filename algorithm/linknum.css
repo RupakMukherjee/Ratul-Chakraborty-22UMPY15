@@ -45,7 +45,7 @@ pre {
 .images figure {
     margin: 10px;
     text-align: center;
-    max-width: 2000px; /* Increased max-width to enlarge images */
+    max-width: 1200px; /* Increased max-width to enlarge images */
 }
 
 .images img {

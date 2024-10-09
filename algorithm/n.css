@@ -1,4 +1,3 @@
-/* linknum.css */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -35,6 +34,7 @@ pre {
     text-align: left; /* Ensure code content remains left-aligned */
 }
 
+/* Styles for image gallery */
 .images {
     display: flex;
     justify-content: center;
@@ -45,7 +45,7 @@ pre {
 .images figure {
     margin: 10px;
     text-align: center;
-    max-width: 1200px; /* Increased max-width to enlarge images */
+    max-width: 45%; /* Set max width to allow side-by-side images */
 }
 
 .images img {
@@ -77,5 +77,4 @@ code {
 
 .container img {
     max-width: 100%; /* Ensure images never go out of container bounds */
-    height: auto;
 }

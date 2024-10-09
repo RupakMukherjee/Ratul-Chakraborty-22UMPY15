@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>n-Component Helicity Calculation</h1>
+        <h1>N-Component Helicity Calculation</h1>
         <p>
             This Python script calculates the helicity of an <em>n-component link</em>, which is a generalization of the 
             concept of linking number for multiple loops. The code visualizes the loops in 3D, computes the linking number 
@@ -24,7 +24,7 @@
 
         <!-- Placeholder for image -->
         <figure>
-            <img src="image1.png" alt="3D Visualization of n-component link">
+            <img src="image/19.png" alt="A simple visulaised n component structure">
             <figcaption>3D Visualization of n-component link.</figcaption>
         </figure>
 
@@ -34,50 +34,58 @@
             parametric equations of the loops and solves the equations to find their intersection points. The following 
             steps are involved in the calculation:
         </p>
-        <ol>
-            <li>Convert the points of the loops to numpy arrays for easier manipulation.</li>
-            <li>Construct triangles from the points of the first loop.</li>
-            <li>Find the parametric equations for the lines of the second loop (red vectors) and for the planes of the 
-                triangles (blue triangles).</li>
-            <li>Solve the system of equations to find the intersection points.</li>
-            <li>Determine the orientation of the crossing using the gradient vector and the solution vector.</li>
-        </ol>
+        
+        <p>
+            Convert the points of the loops to numpy arrays for easier manipulation.
+            Construct triangles from the points of the first loop.
+            Find the parametric equations for the lines of the second loop (red vectors) and for the planes of the triangles (blue triangles).
+            Solve the system of equations to find the intersection points.
+            Determine the orientation of the crossing using the gradient vector and the solution vector.
+        </p>
+            
+        
 
         <!-- Placeholder for image -->
         <figure>
-            <img src="image2.png" alt="Linking Number Calculation Diagram">
-            <figcaption>Illustration of linking number calculation.</figcaption>
+            <img src="image/scheme1.jpg" alt="Linking Number Calculation Diagram">
+            <figcaption>Linking number calculation.</figcaption>
         </figure>
 
         <h2>Helicity and Hopf Link Determination</h2>
         <p>
-            The helicity of the n-component link is calculated by summing the linking numbers for all pairs of loops. 
-            If the helicity matches certain conditions, the structure is determined to be an <strong>n-component Hopf link</strong>.
+            The helicity of the n-component link is calculated by summing the linking numbers for each pair of loops present in the structure, meaning, helicity is the sum of linking numbers for each pair of loops present in the structure. If the helicity matches certain conditions, the structure is determined to be an <strong>n-component Hopf link</strong>.
         </p>
 
         <!-- Placeholder for image -->
         <figure>
-            <img src="image3.png" alt="Hopf Link Determination">
-            <figcaption>Hopf link determination based on helicity values.</figcaption>
+            <img src="image/18.png" alt="Helicity is 2">
+            <figcaption>Helicity is 2.</figcaption>
+        </figure>
+
+        <figure></figure>
+            <img src="image/20.png" alt="Helicity is 3">
+            <figcaption>Helicity is 3.</figcaption>
         </figure>
 
         <h2>Comparison of Two Structures</h2>
         <p>
-            The script compares two structures <code>L1</code> and <code>L2</code> to determine if they are the same 
-            by calculating their helicity. If the helicity values are equal, the structures are considered topologically 
+            The script then compares two structures <code>L1</code> and <code>L2</code> to determine if they are the same by calculating their helicity. If the helicity values are equal, the structures are considered topologically 
             identical.
         </p>
 
-        <h3>Output</h3>
-        <pre>
-            THE OBTAINED TWO STRUCTURES ARE DIFFERENT
-        </pre>
+        
 
         <!-- Placeholder for image -->
-        <figure>
-            <img src="image4.png" alt="Comparison of two structures">
-            <figcaption>Comparison of two structures L1 and L2.</figcaption>
-        </figure>
+        <div class="image-gallery">
+            <div class="gallery-item">
+                <img src="image/17.png" alt="Helicity is 5.">
+                <figcaption>Helicity is 5.</figcaption>
+            </div>
+            <div class="gallery-item">
+                <img src="image/21.png" alt="Helicity is 4.">
+                <figcaption>Helicity is 4.</figcaption>
+            </div>
+        </div>
     </div>
 </body>
 </html>
